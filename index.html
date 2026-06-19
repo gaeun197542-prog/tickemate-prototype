@@ -391,8 +391,6 @@ input { font-family: inherit; }
   }
 }
 
-  </style>
-  <style>
 /* ===========================================================
    TickeMate AI — component styles
    =========================================================== */
@@ -785,6 +783,7 @@ input[type="date"], input[type="datetime-local"] { color-scheme: dark; }
 .et-time { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--muted-2); }
 .done-actions { display: flex; gap: 11px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
 
+
   </style>
 </head>
 <body>
@@ -798,6 +797,7 @@ input[type="date"], input[type="datetime-local"] { color-scheme: dark; }
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <script type="text/babel">
+/* ===== data.jsx ===== */
 /* ===========================================================
    TickeMate AI — data + translations (EN / JA / ZH / KO)
    Default language: KO. Exposed on window.
@@ -1360,8 +1360,8 @@ const LANGS = [
 
 window.TM = { CONCERTS, SEAT_TIERS, T, formatPrice, LANGS, PLATFORMS, TZ_LIST, TZ_LABEL, CARD_COUNTRIES, CARD_ISSUERS };
 
-  </script>
-  <script type="text/babel">
+
+/* ===== lang_extra.jsx ===== */
 /* ===========================================================
    TickeMate AI — additional languages
    ES / PT / TH / ID / FR / TL
@@ -1638,8 +1638,8 @@ window.TM = { CONCERTS, SEAT_TIERS, T, formatPrice, LANGS, PLATFORMS, TZ_LIST, T
   });
 })();
 
-  </script>
-  <script type="text/babel">
+
+/* ===== ui.jsx ===== */
 /* ===========================================================
    TickeMate AI — shared UI components
    =========================================================== */
@@ -1816,8 +1816,8 @@ function LanguageSwitcher({ lang, setLang }) {
 
 Object.assign(window, { Icon, AiMessage, Copilot, StepProgress, LanguageSwitcher });
 
-  </script>
-  <script type="text/babel">
+
+/* ===== step2.jsx ===== */
 /* ===========================================================
    TickeMate AI — STEP 2 · Account readiness checklist
    1) Cross-platform name health check
@@ -2220,8 +2220,8 @@ function ModHead({ m, icon, title, sub }) {
 
 Object.assign(window, { Step2Account });
 
-  </script>
-  <script type="text/babel">
+
+/* ===== steps_a.jsx ===== */
 /* ===========================================================
    TickeMate AI — Intro + Step 1/2/3
    =========================================================== */
@@ -2367,8 +2367,8 @@ function Step3FanClub({ t, lang, data, update, onNext }) {
 
 Object.assign(window, { Intro, Step1Concert, Step3FanClub });
 
-  </script>
-  <script type="text/babel">
+
+/* ===== steps_b.jsx ===== */
 /* ===========================================================
    TickeMate AI — Step 4/5/6 + Completion
    =========================================================== */
@@ -2719,8 +2719,8 @@ function CompletionScreen({ t, lang, data, onRestart, elapsed }) {
 
 Object.assign(window, { Step4Queue, Step5Seats, Step6Payment, CompletionScreen });
 
-  </script>
-  <script type="text/babel">
+
+/* ===== app.jsx ===== */
 /* ===========================================================
    TickeMate AI — App orchestrator
    =========================================================== */
@@ -2800,6 +2800,8 @@ function App() {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+
 
   </script>
 </body>
