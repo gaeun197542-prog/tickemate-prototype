@@ -1,8 +1,10 @@
 /* ===========================================================
    TickeMate AI — Intro + Step 1/2/3
    =========================================================== */
+const { useState, useEffect, useRef, useCallback } = React;
 const { CONCERTS, SEAT_TIERS } = window.TM;
 const fmt = window.TM.formatPrice;
+const { Icon, AiMessage } = window;
 
 /* ---------------- INTRO ---------------- */
 function Intro({ t, onStart }) {

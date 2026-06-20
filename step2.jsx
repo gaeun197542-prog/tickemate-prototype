@@ -5,7 +5,9 @@
    3) Payment method pre-check
    4) Concert info + timezone-aware alerts
    =========================================================== */
+const { useState, useEffect, useRef, useCallback } = React;
 const { PLATFORMS, TZ_LIST, TZ_LABEL, CARD_COUNTRIES, CARD_ISSUERS } = window.TM;
+const { Icon } = window;
 const S2_LOCALE = { en: "en-US", ja: "ja-JP", zh: "zh-CN", ko: "ko-KR" };
 
 /* ---------- name-matching logic ---------- */

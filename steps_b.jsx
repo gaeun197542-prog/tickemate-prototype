@@ -1,6 +1,7 @@
 /* ===========================================================
    TickeMate AI — Step 4/5/6 + Completion
    =========================================================== */
+const { useState, useEffect, useRef, useCallback } = React;
 
 /* ---------------- STEP 4 · QUEUE ---------------- */
 function Step4Queue({ t, lang, data, update, onNext }) {
